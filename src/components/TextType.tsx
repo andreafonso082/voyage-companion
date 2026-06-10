@@ -1,5 +1,4 @@
 import { useEffect, useRef, useState, useMemo, useCallback } from 'react';
-import { gsap } from 'gsap';
 
 interface TextTypeProps {
   text: string | string[];
@@ -145,19 +144,6 @@ const TextType = ({
   }, [startOnVisible]);
 
   useEffect(() => {
-    if (showCursor && cursorRef.current) {
-      gsap.set(cursorRef.current, { opacity: 1 });
-      gsap.to(cursorRef.current, {
-        opacity: 0,
-        duration: cursorBlinkDuration,
-        repeat: -1,
-        yoyo: true,
-        ease: 'power2.inOut'
-      });
-    }
-  }, [showCursor, cursorBlinkDuration]);
-
-  useEffect(() => {
     if (!isVisible) return;
 
     let timeout: ReturnType<typeof setTimeout>;
@@ -238,10 +224,12 @@ const TextType = ({
         <span
           ref={cursorRef}
           className={`ml-1 inline-block ${cursorClassName} ${shouldHideCursor ? 'hidden' : ''}`}
+          style={{ animation: `textTypeCursorBlink ${cursorBlinkDuration * 2}s ease-in-out infinite` }}
         >
           {cursorCharacter}
         </span>
       )}
+      <style>{`@keyframes textTypeCursorBlink { 0%, 100% { opacity: 1 } 50% { opacity: 0 } }`}</style>
     </div>
   );
 };
