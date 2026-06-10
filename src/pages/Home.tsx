@@ -298,13 +298,13 @@ const Home = () => {
               <div className={`h-full bg-primary transition-all duration-[2000ms] ease-out ${processStep1.isVisible ? 'w-full' : 'w-0'}`} />
             </div>
             
-            <div ref={processStep1.elementRef} className="flex flex-col gap-10 md:hidden">
+            <div className="flex flex-col gap-10 md:hidden">
               {processSteps.map((step, index) => {
                 const fromLeft = index % 2 === 0;
                 return (
                   <div
                     key={index}
-                    className={`w-[85%] transition-all duration-700 ease-out ${fromLeft ? 'self-start text-left' : 'self-end text-right'} ${processStep1.isVisible ? 'opacity-100 translate-x-0' : `opacity-0 ${fromLeft ? '-translate-x-12' : 'translate-x-12'}`}`}
+                    className={`w-full transition-all duration-700 ease-out ${fromLeft ? 'text-left' : 'text-right'} ${processSection.isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
                     style={{ transitionDelay: `${index * 200}ms` }}
                   >
                     <span className="text-sm font-semibold text-primary mb-2 block">{step.step}</span>
