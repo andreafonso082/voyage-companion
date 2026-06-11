@@ -135,7 +135,7 @@ const Header = () => {
               <Link
                 key={link.path}
                 to={link.path}
-                ref={(el) => {
+                ref={(el: HTMLAnchorElement | null) => {
                   linkRefs.current[i] = el;
                 }}
                 onMouseEnter={() => moveTo(i)}
