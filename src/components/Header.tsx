@@ -1,6 +1,6 @@
 import { useRef, useState, useEffect } from "react";
 // @ts-nocheck
-import { Link, useLocation, useNavigate } from "@tanstack/react-router";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { Menu, X, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import velaLogo from "@/assets/vela-logo-header.png";
@@ -200,7 +200,7 @@ const Header = () => {
           className="h-8 w-auto object-contain cursor-pointer"
           onClick={(e) => {
             e.stopPropagation();
-            navigate({ to: "/" });
+            navigate("/");
           }}
         />
         Vamos trabalhar juntos

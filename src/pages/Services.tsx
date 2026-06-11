@@ -1,5 +1,5 @@
 // @ts-nocheck
-import { Link } from "@tanstack/react-router";
+import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import Footer from "@/components/Footer";
 import ServiceCard from "@/components/ServiceCard";
