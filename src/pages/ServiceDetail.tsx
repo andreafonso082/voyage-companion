@@ -1,5 +1,5 @@
 // @ts-nocheck
-import { useParams, Link, Navigate } from "@tanstack/react-router";
+import { useParams, Link, Navigate } from "react-router-dom";
 import { Check, ArrowRight, ArrowLeft } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
@@ -8,7 +8,7 @@ import { getServiceBySlug, servicesData } from "@/data/servicesData";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 
 const ServiceDetail = ({ slug: slugProp }: { slug?: string } = {}) => {
-  const params = useParams({ strict: false }) as { slug?: string };
+  const params = useParams() as { slug?: string };
   const slug = slugProp ?? params.slug;
   const service = slug ? getServiceBySlug(slug) : undefined;
 

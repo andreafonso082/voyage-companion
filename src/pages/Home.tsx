@@ -1,5 +1,5 @@
 // @ts-nocheck
-import { Link } from "@tanstack/react-router";
+import { Link } from "react-router-dom";
 import { Zap, Pen, ArrowRight, Quote } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
