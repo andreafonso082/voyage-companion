@@ -32,7 +32,7 @@ const organizationLd = {
   name: SITE_NAME,
   url: SITE_URL,
   logo: abs("/favicon.png"),
-  image: abs("/og-image.png"),
+  image: abs("/social-image.png"),
   email: "contacto@agencia-vela.com",
   telephone: "+351968334043",
   priceRange: "€€",
