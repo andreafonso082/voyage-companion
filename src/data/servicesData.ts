@@ -38,7 +38,7 @@ export const servicesData: ServiceDetail[] = [
       "SEO básico incluído desde o lançamento",
       "Formulários de contacto e integração com email",
       "Integração com redes sociais e Google Maps",
-      "Formação de gestão básica do website",
+      "Suporte técnico contínuo",
       "Hospedagem e domínio aconselhados",
     ],
     benefits: [
