@@ -26,7 +26,7 @@ export function buildHead({
   noindex = false,
 }: SeoInput) {
   const url = abs(path);
-  const ogImage = image ? (image.startsWith("http") ? image : abs(image)) : abs("/og-image.png");
+  const ogImage = image ? (image.startsWith("http") ? image : abs(image)) : abs("/social-image.png");
 
   const meta: Array<Record<string, string>> = [
     { title },

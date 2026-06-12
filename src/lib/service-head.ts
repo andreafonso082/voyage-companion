@@ -31,7 +31,7 @@ export function buildServiceSeo(slug: string): { input: SeoInput; jsonLd: unknow
     serviceType: service.shortTitle,
     description: service.seoDescription,
     url: abs(path),
-    image: abs(typeof service.image === "string" ? service.image : "/og-image.png"),
+    image: abs(typeof service.image === "string" ? service.image : "/social-image.png"),
     areaServed: [
       { "@type": "AdministrativeArea", name: "Algarve" },
       { "@type": "City", name: "Tavira" },
