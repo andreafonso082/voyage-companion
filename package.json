@@ -1,8 +1,11 @@
 {
-  "name": "tanstack_start_ts",
+  "name": "vite-react-site",
   "private": true,
   "sideEffects": false,
   "type": "module",
+  "engines": {
+    "node": ">=18"
+  },
   "scripts": {
     "dev": "vite dev",
     "build": "vite build",
