@@ -2,7 +2,7 @@ import { useState } from "react";
 import Footer from "@/components/Footer";
 
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
-import velaLogo from "@/assets/vela-logo.png";
+
 const About = () => {
   const [revealedWords, setRevealedWords] = useState<number[]>([]);
   const storySection = useScrollAnimation();
