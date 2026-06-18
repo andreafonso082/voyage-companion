@@ -1,7 +1,7 @@
 // @ts-nocheck
 import { Link } from "react-router-dom";
 import { Mail, Phone, MapPin, Instagram, MessageCircle } from "lucide-react";
-import velaLogo from "@/assets/vela-logo.png";
+
 const Footer = () => {
   return <footer className="bg-secondary/60 backdrop-blur-xl border-t border-white/[0.06] text-secondary-foreground">
       <div className="container mx-auto px-4 py-16">
