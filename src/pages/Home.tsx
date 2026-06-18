@@ -133,7 +133,7 @@ const Home = () => {
             </span>
           </h1>
           <p className="text-lg md:text-xl text-white/70 mb-10 max-w-2xl mx-auto leading-relaxed font-normal text-balance">
-            Especialistas em criação de websites, web design, SEO, Google Meu Negócio e gestão de redes sociais. Sites desde <span className="text-white font-medium">700€</span>. Marketing acessível profissional para pequenos negócios.
+            Na <span className="text-white font-medium">Vela</span> (Agência Vela) somos especialistas em criação de websites, web design, SEO, Google Meu Negócio e gestão de redes sociais. Sites desde <span className="text-white font-medium">700€</span>. Marketing acessível e profissional para pequenos negócios.
           </p>
           <div className="flex flex-col sm:flex-row gap-3 justify-center">
             <Link to="/quote">
