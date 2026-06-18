@@ -30,6 +30,15 @@ const organizationLd = {
   "@type": ["Organization", "ProfessionalService", "LocalBusiness"],
   "@id": `${SITE_URL}/#organization`,
   name: SITE_NAME,
+  alternateName: ["Vela", "Vela Agência", "Vela Marketing", "Agencia Vela"],
+  legalName: "Agência Vela",
+  brand: {
+    "@type": "Brand",
+    name: "Vela",
+    alternateName: "Agência Vela",
+  },
+  slogan: "Vela — Marketing Digital no Algarve",
+  description: "Vela (Agência Vela) é uma agência de marketing digital e web design em Tavira, Algarve.",
   url: SITE_URL,
   logo: abs("/favicon.png"),
   image: abs("/social-image.png"),
@@ -50,15 +59,31 @@ const organizationLd = {
   ],
 };
 
+const websiteLd = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "@id": `${SITE_URL}/#website`,
+  url: SITE_URL,
+  name: "Vela",
+  alternateName: ["Agência Vela", "Vela Marketing", "Vela Algarve"],
+  publisher: { "@id": `${SITE_URL}/#organization` },
+  inLanguage: "pt-PT",
+  potentialAction: {
+    "@type": "SearchAction",
+    target: `${SITE_URL}/?q={search_term_string}`,
+    "query-input": "required name=search_term_string",
+  },
+};
+
 function HomePage() {
   return (
     <>
       <SeoHead
-        title="Agência Vela | Marketing Digital, Web Design e SEO no Algarve e Tavira"
-        description="Agência de marketing digital em Tavira e Algarve. Criação de websites desde 700€, SEO, Google Meu Negócio, gestão de redes sociais e branding para pequenos negócios em Portugal."
+        title="Vela — Agência Vela | Marketing Digital, Web Design e SEO no Algarve e Tavira"
+        description="Vela (Agência Vela) é a agência de marketing digital em Tavira e Algarve. Criação de websites desde 700€, SEO, Google Meu Negócio, gestão de redes sociais e branding para pequenos negócios em Portugal."
         path="/"
-        keywords="agência marketing algarve, agência marketing tavira, marketing digital algarve, web design algarve, web design tavira, criação de websites algarve, SEO algarve, agência vela"
-        jsonLd={[organizationLd]}
+        keywords="vela, vela agência, vela marketing, vela algarve, vela tavira, vela web design, agência vela, agência marketing algarve, agência marketing tavira, marketing digital algarve, web design algarve, web design tavira, criação de websites algarve, SEO algarve"
+        jsonLd={[organizationLd, websiteLd]}
       />
       <Home />
     </>
